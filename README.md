@@ -33,28 +33,14 @@ This project provides a complete pipeline for:
 
 1. **SDSL (Succinct Data Structure Library)**
    - Required for r-index functionality
-   - Headers should be in `~/include`
-   - Libraries should be in `~/lib`
 
 2. **divsufsort** (required for compilation, optional for runtime)
-   - Libraries: `libdivsufsort.so` and `libdivsufsort64.so`
-   - Should be in `~/lib`
    - **Note**: The libraries must be present at compile/link time, but are only used at runtime when the `-divsufsort` flag is passed to `ri-build`. By default, SE-SAIS is used (which doesn't require divsufsort at runtime).
 
 3. **CMake** (version 2.6 or higher)
    - Required for building r-index tools
 
 4. **C++11 compatible compiler** (g++ recommended)
-
-### Environment Setup
-
-Ensure your library paths are configured:
-
-```bash
-# Add to ~/.bashrc for permanent setup
-export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
-export LIBRARY_PATH="$HOME/lib:$LIBRARY_PATH"
-```
 
 ## Installation
 
@@ -91,7 +77,7 @@ or
 make install PREFIX=$(HOME)/.local
 ```
 
-Make sure all your installed libraries' paths are configured. 
+Ensure all your installed libraries' paths are configured. 
 
 ### Build Project
 
