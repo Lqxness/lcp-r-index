@@ -69,9 +69,8 @@ Follow the instructions at (https://github.com/y-256/libdivsufsort) for installa
 ### Install lcptools Library
 
 Follow the instructions at (https://github.com/BilkentCompGen/lcptools) for installation.
-```
 
-### Buşld Project
+### Build Project
 
 From the main project directory:
 
