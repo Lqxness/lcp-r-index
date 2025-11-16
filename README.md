@@ -58,21 +58,44 @@ export LIBRARY_PATH="$HOME/lib:$LIBRARY_PATH"
 
 ## Installation
 
+### Clone Repository
+
+```bash
+git clone --recursive https://github.com/Lqxness/lcp-r-index.git
+```
+
 #### Install SDSL Library
 
 Follow the instructions at (https://github.com/simongog/sdsl-lite) for installation.
 
-#### Install divsufsort
+#### Install lcptools Library
 
-Follow the instructions at (https://github.com/y-256/libdivsufsort) for installation.
+After installing sdsl-lite, navigate to lcptools directory:
 
-### Install lcptools Library
+```bash
+cd ../lcp-r-index/lcptools
+```
 
-Follow the instructions at (https://github.com/BilkentCompGen/lcptools) for installation.
+then run
+
+```bash
+# System-wide installation
+sudo make install
+```
+
+or
+
+```bash
+# User-specific installation
+# Install the library to a custom directory (e.g., `~/.local`):**
+make install PREFIX=$(HOME)/.local
+```
+
+Make sure all your installed libraries' paths are configured. 
 
 ### Build Project
 
-From the main project directory:
+From the main project directory (/lcp-r-index):
 
 ```bash
 make
