@@ -34,8 +34,8 @@ This project provides a complete pipeline for:
 1. **SDSL (Succinct Data Structure Library)**
    - Required for r-index functionality
 
-2. **divsufsort** (required for compilation, optional for runtime)
-   - **Note**: The libraries must be present at compile/link time, but are only used at runtime when the `-divsufsort` flag is passed to `ri-build`. By default, SE-SAIS is used (which doesn't require divsufsort at runtime).
+2. **LCPtools (Locally Consistent Parsing)**
+   - Required to complete the pipeline of creating indexes from fasta files
 
 3. **CMake** (version 2.6 or higher)
    - Required for building r-index tools
